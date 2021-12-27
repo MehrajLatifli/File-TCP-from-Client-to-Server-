@@ -265,7 +265,7 @@ namespace File_TCP_Server.View_Models
                         File.Copy($"{FileList.ElementAt(j).FilePath}", $"../../DownloadFolder/{guid} {Path.GetExtension(FileList.ElementAt(j).FilePath)}", true);
 
 
-                        MessageBox.Show($"{FileList.ElementAt(j).FilePath} downloaded ");
+                        MessageBox.Show($"{FileList.ElementAt(j).FilePath} downloaded");
 
                        // Process.Start("msedge.exe", $"{FileList.ElementAt(j).FilePath}");
                     }
