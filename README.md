@@ -12,4 +12,4 @@ Example for TCP (from Client to Server) and Binary Serialize and DeSerialize
 
 
 
-[![Everything Is AWESOME](https://img.youtube.com/vi/f7ZKBXH7HBA&list=PLiUhD-1cCRhfJn6wMqQqX8iI8gvgXv82i/0.jpg)](https://www.youtube.com/watch?v=f7ZKBXH7HBA&list=PLiUhD-1cCRhfJn6wMqQqX8iI8gvgXv82i "Everything Is AWESOME")
+[![Everything Is AWESOME](https://img.youtube.com/vi/f7ZKBXH7HBA&list=PLiUhD-1cCRhfJn6wMqQqX8iI8gvgXv82i/1.jpg)](https://www.youtube.com/watch?v=f7ZKBXH7HBA&list=PLiUhD-1cCRhfJn6wMqQqX8iI8gvgXv82i "Everything Is AWESOME")
