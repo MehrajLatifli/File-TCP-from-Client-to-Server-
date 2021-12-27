@@ -108,7 +108,7 @@ namespace File_TCP_Server.View_Models
 
 
 
-            timer2.Interval = new TimeSpan(0, 0, 0, 0, 100);
+            timer2.Interval = new TimeSpan(0, 0, 0, 1);
 
             timer2.Tick += Timer2_Tick;
 
