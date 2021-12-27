@@ -100,7 +100,7 @@ namespace File_TCP_Server.View_Models
             FileList = new ObservableCollection<Files>();
             FileList2 = new ObservableCollection<Files>();
 
-            timer.Interval = new TimeSpan(0, 0, 0, 1, 0);
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 100);
 
             timer.Tick += Timer_Tick;
 
@@ -108,7 +108,7 @@ namespace File_TCP_Server.View_Models
 
 
 
-            timer2.Interval = new TimeSpan(0, 0, 0, 1);
+            timer2.Interval = new TimeSpan(0, 0, 0, 10);
 
             timer2.Tick += Timer2_Tick;
 
@@ -250,7 +250,6 @@ namespace File_TCP_Server.View_Models
 
                 if (j != -1)
                 {
-                    MessageBox.Show($"{FileList.ElementAt(j).FilePath}");
 
 
                     if (!Directory.Exists("../../DownloadFolder"))
@@ -265,7 +264,10 @@ namespace File_TCP_Server.View_Models
                     {
                         File.Copy($"{FileList.ElementAt(j).FilePath}", $"../../DownloadFolder/{guid} {Path.GetExtension(FileList.ElementAt(j).FilePath)}", true);
 
-                        Process.Start("msedge.exe", $"{FileList.ElementAt(j).FilePath}");
+
+                        MessageBox.Show($"{FileList.ElementAt(j).FilePath} downloaded");
+
+                       // Process.Start("msedge.exe", $"{FileList.ElementAt(j).FilePath}");
                     }
                 }
                
