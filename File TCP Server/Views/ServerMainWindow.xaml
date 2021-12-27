@@ -1,0 +1,69 @@
+﻿<Window x:Class="File_TCP_Server.Views.ServerMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:File_TCP_Server.Views" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        mc:Ignorable="d"
+         Title="TCP Server" Height="910" Width="800" Background="CornflowerBlue" Icon="Server.png" >
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <DockPanel>
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid x:Name="ConnectControlGrid" Grid.Row="0">
+
+
+                <Grid x:Name="ConnectbuttonGrid">
+
+                    <ToggleButton x:Name="ConnectToggleButton" Margin="5" Content="Connect" FontSize="40" Background="Purple" Foreground="White"  Command="{Binding ConnectCommand}"></ToggleButton>
+
+                </Grid>
+
+            </Grid>
+
+            <Grid x:Name="HistoryListboxGrid" Grid.Row="1">
+                <ListBox x:Name="HistoryListbox" Margin="5" Background="Purple" Foreground="White" FontSize="15" ItemsSource="{Binding Texts}">
+
+                </ListBox>
+            </Grid>
+
+            <Grid x:Name="ImageListboxGrid" Grid.Row="2">
+
+                <ListBox x:Name="Listbox1" ItemsSource="{Binding FileList2, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" DisplayMemberPath="FilePath" FontSize="15" Foreground="White" Background="CornflowerBlue" MinHeight="500" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+
+
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListBoxItem}">
+                            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                            <Setter Property="VerticalContentAlignment" Value="Top"/>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction Command="{Binding OpenFileCommand}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+
+                </ListBox>
+
+
+            </Grid>
+
+        </Grid>
+
+    </DockPanel>
+</Window>
