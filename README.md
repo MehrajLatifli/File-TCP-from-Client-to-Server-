@@ -11,24 +11,7 @@ Example for TCP (from Client to Server) and Binary Serialize and DeSerialize
 <html>
 <title>Web Page Design</title>
 <head>
-<style type="text/css">
-div
-{
-   width:100px;
-   height:75px;
-   background-color:red;
-   border:1px solid black;
-}
-#div2
-{
-   transform:rotate(30deg);
-   -ms-transform:rotate(30deg); /* IE 9 */
-   -moz-transform:rotate(30deg); /* Firefox */
-   -webkit-transform:rotate(30deg); /* Safari and Chrome */
-   -o-transform:rotate(30deg); /* Opera */
-   background-color:yellow;
-}
-</style>
+
 </head>
 <body>
 <div>Hello, World!</div>
